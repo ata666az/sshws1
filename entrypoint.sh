@@ -87,9 +87,9 @@ WS_PORT="$WS_INTERNAL_PORT" WS_TARGET_HOST="127.0.0.1" WS_TARGET_PORT="22" \
 # Isi CF_TUNNEL_TOKEN di environment variable Railway untuk mengaktifkan.
 # Di dashboard Cloudflare Zero Trust, arahkan Public Hostname tunnel ini
 # ke service HTTP: localhost:$WS_INTERNAL_PORT (bukan port mux publik).
-if [ -n "eyJhIjoiZDZjZjU1ZDVjMzAxZDczOWU1M2RkYTBlMWFiMDg1ODciLCJ0IjoiOWFlMTM1MWMtNzE1Mi00Y2U4LThmMDItNGMxNTkzZGU0MmE4IiwicyI6Ik5URmtObUppTkRJdFl6VTRZUzAwTnpNeExUZzBZV010WVRaa1pXWTVOalJpWXpVMiJ9" ]; then
+if [ -n "eyJhIjoiNDE4NGYxODk2MTQ4YzhiMDIzMWVkNjVlZjhiMWZhZTEiLCJ0IjoiNTMzYjFmYzktNjMyZi00ZTlkLWE1OTgtNmE0MWVhNDI3ZDE5IiwicyI6Ik9EVmhZV0UyWVRndFltUTRNQzAwT0RreExXSXhNMlV0WWpGaFlqZzVZMkppTVRZeSJ9" ]; then
     echo "[*] Menjalankan Cloudflare Tunnel (Argo) via token..."
-    cloudflared tunnel run --token "eyJhIjoiZDZjZjU1ZDVjMzAxZDczOWU1M2RkYTBlMWFiMDg1ODciLCJ0IjoiOWFlMTM1MWMtNzE1Mi00Y2U4LThmMDItNGMxNTkzZGU0MmE4IiwicyI6Ik5URmtObUppTkRJdFl6VTRZUzAwTnpNeExUZzBZV010WVRaa1pXWTVOalJpWXpVMiJ9" &
+    cloudflared tunnel run --token "eyJhIjoiNDE4NGYxODk2MTQ4YzhiMDIzMWVkNjVlZjhiMWZhZTEiLCJ0IjoiNTMzYjFmYzktNjMyZi00ZTlkLWE1OTgtNmE0MWVhNDI3ZDE5IiwicyI6Ik9EVmhZV0UyWVRndFltUTRNQzAwT0RreExXSXhNMlV0WWpGaFlqZzVZMkppTVRZeSJ9" &
 else
     echo "[!] CF_TUNNEL_TOKEN tidak diset -> Cloudflare Tunnel dilewati."
 fi
